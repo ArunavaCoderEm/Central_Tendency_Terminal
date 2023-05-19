@@ -11,6 +11,7 @@ while (k != 00):
     index += 1
 dataset.remove(dataset[index-1])
 datasets = list(set(dataset))
+k2 = len(datasets)
 n = len(dataset)
 print(f'\nYour DataSet is {dataset}\n')
 print(f'\nLength of DataSet is {len(dataset)}\n')
@@ -20,9 +21,9 @@ print(f'Mean of given dataset is {mean}\n')
 dataset.sort
 median = True
 if (len(datasets)%2 != 0):
-    median = datasets[int((n+1)/2)]
+    median = datasets[int((k2+1)/2)]
 else :
-    median = (datasets[int(n/2)] + datasets[int(n/2)+1])/2
+    median = (datasets[int(k2/2)] + datasets[int(k2/2)+1])/2
 print(f'Median of given dataset is {median}\n') 
 counts = []
 for m in dataset:
